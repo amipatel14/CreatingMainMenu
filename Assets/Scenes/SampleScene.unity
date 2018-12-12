@@ -442,6 +442,7 @@ GameObject:
   - component: {fileID: 203827392}
   - component: {fileID: 203827391}
   - component: {fileID: 203827393}
+  - component: {fileID: 203827394}
   m_Layer: 5
   m_Name: MainMenuPanel
   m_TagString: Untagged
@@ -526,6 +527,19 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!114 &203827394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203827389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06c16f0ff82244347b7957e63d943a9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 582759461}
+  selectedObject: {fileID: 1493341704}
 --- !u!1 &251405507
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,6 +614,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 251405507}
+--- !u!1 &355217339 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100008, guid: b6a1cf4e3eeaf9a4ca38bf8acb910a6d, type: 2}
+  m_PrefabInternal: {fileID: 957563517}
 --- !u!1 &478066716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,7 +1102,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Start
+  m_Text: Quit
 --- !u!222 &824750972
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1526,6 +1544,7 @@ GameObject:
   - component: {fileID: 1076716548}
   - component: {fileID: 1076716547}
   - component: {fileID: 1076716546}
+  - component: {fileID: 1076716549}
   m_Layer: 5
   m_Name: HelpPanel
   m_TagString: Untagged
@@ -1609,6 +1628,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1076716544}
+--- !u!114 &1076716549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1076716544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06c16f0ff82244347b7957e63d943a9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 582759461}
+  selectedObject: {fileID: 29657702}
 --- !u!1 &1181209233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1849,8 +1881,9 @@ GameObject:
   - component: {fileID: 1389990810}
   - component: {fileID: 1389990809}
   - component: {fileID: 1389990808}
+  - component: {fileID: 1389990811}
   m_Layer: 5
-  m_Name: StartButton (3)
+  m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1913,7 +1946,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1389990809}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1389990811}
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1389990809
@@ -1949,6 +1993,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1389990806}
+--- !u!114 &1389990811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1389990806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0aef6de527bfda4483780e255b87cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1493341704
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,6 +2615,7 @@ GameObject:
   - component: {fileID: 2000595604}
   - component: {fileID: 2000595603}
   - component: {fileID: 2000595602}
+  - component: {fileID: 2000595605}
   m_Layer: 5
   m_Name: AudioPanel
   m_TagString: Untagged
@@ -2648,3 +2704,16 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2000595600}
+--- !u!114 &2000595605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2000595600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06c16f0ff82244347b7957e63d943a9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 582759461}
+  selectedObject: {fileID: 355217339}
