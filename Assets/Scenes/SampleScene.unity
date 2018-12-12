@@ -494,6 +494,7 @@ GameObject:
   - component: {fileID: 203827393}
   - component: {fileID: 203827394}
   - component: {fileID: 203827395}
+  - component: {fileID: 203827396}
   m_Layer: 5
   m_Name: MainMenuPanel
   m_TagString: Untagged
@@ -609,6 +610,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &203827396
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203827389}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &251405507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,15 +1946,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 203827389}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 203827395}
+        m_MethodName: SetTrigger
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Close
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1076716544}
